@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/manycta/heisei.html"
+  to = "/manycta/index.html"
+
+[[redirects]]
+  from = "/seq/beer.html"
+  to = "/seq/index.html"
+
+[[redirects]]
+  from = "/tile/bird.html"
+  to = "/tile/index.html"
+
+[[redirects]]
+  from = "/tmpl/goldenweek.html"
+  to = "/tmpl/index.html"
