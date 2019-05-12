@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button as BSButton, Col, Image, Row, } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
-
 
 /**
  * Container contains a tweet.

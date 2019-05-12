@@ -11,13 +11,15 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "source-map-support": "^0.5.12"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
     "ava": "^1.4.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.5",
@@ -50,9 +52,7 @@
   "ava": {
     "babel": {
       "testOptions": {
-        "presets": [
-          "@babel/preset-react"
-        ]
+        "presets": []
       },
       "extensions": [
         "js",
@@ -60,14 +60,23 @@
       ]
     },
     "require": [
-      "esm",
+      "@babel/register",
       "./test/_setup.js"
     ]
   },
   "babel": {
+    "sourceMaps": "inline",
     "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
+      "@babel/preset-react",
+      [
+        "env",
+        {
+          "targets": {
+            "node": 7
+          },
+          "useBuiltIns": true
+        }
+      ]
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties"

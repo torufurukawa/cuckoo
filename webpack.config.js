@@ -77,7 +77,7 @@ function makeConfig(base, name, dirname, cards=[]) {
 
   // append cards to plugin
   cards.map((card) => {
-    const imageURL = `https://tipsytoru.netlify.com/tile/card-${name}.png`;
+    const imageURL = `https://tipsytoru.netlify.com/tile/card-${card}.png`;
     const refresh = `0; URL='/${name}/'`;
     const spec = {
       template: `./src/${dirname}/card.html`,

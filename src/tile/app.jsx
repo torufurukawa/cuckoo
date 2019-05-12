@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Row, Col, Image, Card } from 'react-bootstrap';
 import { Helmet } from 'react-helmet'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './../cuckoo/style.css'
 import Cuckoo from './../cuckoo'
 import bird2006 from './bird-2006.png'
 import bird2007 from './bird-2007.png'

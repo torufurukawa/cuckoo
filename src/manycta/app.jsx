@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Helmet } from 'react-helmet'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './../cuckoo/style.css'
 import Cuckoo from './../cuckoo'
 import img from './heisei.jpg'
 
