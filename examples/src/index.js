@@ -1,19 +1,8 @@
-# Cuckoo
-
-Cuckoo is a collection of Twitter post-click experience helpers.
-
-
-# Example
-
-```
 import React from 'react'
 import { render } from 'react-dom'
-
-// You will need this CSS
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-import Cuckoo from '@torufurukawa/cuckoo'
-import '@torufurukawa/cuckoo/dist/style.css'
+import Cuckoo from '../../src'
+import '../../src/style.css'
 
 function App() {
   return (
@@ -24,4 +13,3 @@ function App() {
   )
 }
 render(<App />, document.getElementById('root'))
-```

@@ -1,93 +1,46 @@
 {
-  "name": "cuckoo",
+  "name": "@torufurukawa/cuckoo",
   "version": "1.0.0",
-  "description": "Twitter post-click experience examples",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "bootstrap": "^4.3.1",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "source-map-support": "^0.5.12"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.4.4",
-    "ava": "^1.4.1",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.0.5",
-    "babel-preset-react-app": "^3.1.2",
-    "babel-register": "^6.26.0",
-    "braces": "^3.0.2",
-    "browser-env": "^3.2.6",
-    "copy-webpack-plugin": "^5.0.3",
-    "css-loader": "^2.1.1",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
-    "file-loader": "^3.0.1",
-    "html-webpack-plugin": "^3.2.0",
-    "netlify-cli": "^2.11.7",
-    "prop-types": "^15.7.2",
-    "style-loader": "^0.23.1",
-    "too": "^2.0.2",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
-  },
+  "description": "Twitter Post-Click experience UI Components",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "too --cmd 'npm run serve' --cmd 'npm run watch' --cmd 'ava --watch'",
-    "build": "webpack",
-    "watch": "webpack --watch --mode development",
-    "test": "ava",
-    "serve": "cd dist; netlify dev",
-    "stage": "netlify deploy --dir=dist",
-    "release": "netlify deploy --dir=dist --prod"
-  },
-  "ava": {
-    "babel": {
-      "testOptions": {
-        "presets": []
-      },
-      "extensions": [
-        "js",
-        "jsx"
-      ]
-    },
-    "require": [
-      "@babel/register",
-      "./test/_setup.js"
-    ]
-  },
-  "babel": {
-    "sourceMaps": "inline",
-    "presets": [
-      "@babel/preset-react",
-      [
-        "env",
-        {
-          "targets": {
-            "node": 7
-          },
-          "useBuiltIns": true
-        }
-      ]
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
+    "build": "babel src -d dist --copy-files",
+    "start": "webpack-dev-server --mode development",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:torufurukawa/cuckoo.gitt"
+    "url": "git@github.com:torufurukawa/cuckoo.git"
   },
   "keywords": [],
   "author": "Toru Furukawa",
   "license": "MIT",
-  "homepage": "https://github.com/torufurukawa/cuckoo"
+  "homepage": "https://github.com/torufurukawa/cuckoo",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/react"
+    ]
+  }
 }
