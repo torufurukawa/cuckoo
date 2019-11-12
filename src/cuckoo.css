@@ -12,3 +12,7 @@ body {
   border-right: solid rgb(204, 214, 221) 1px;
   border-left: solid rgb(204, 214, 221) 1px;
 }
+
+.cuckoo .row {
+  margin: 0 0 0.5em
+}
