@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.cuckoo {
+  margin: 0 auto;
+  padding: 1em 1em 2em;
+  max-width: 580px;
+  height: 100vh;
+  border-right: solid rgb(204, 214, 221) 1px;
+  border-left: solid rgb(204, 214, 221) 1px;
+}
