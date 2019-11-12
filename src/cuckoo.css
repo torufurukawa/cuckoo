@@ -16,3 +16,17 @@ body {
 .cuckoo .row {
   margin: 0 0 0.5em
 }
+
+.cuckoo .row .button {
+  border: solid rgb(29, 161, 242) 1px;
+  color: rgb(29, 161, 242);
+  font-size: 100%;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.2em;
+  width: 100%;
+  background-color: white;
+  border-radius: 100px;
+}
