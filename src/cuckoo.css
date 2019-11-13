@@ -1,7 +1,6 @@
 body {
   margin: 0;
   background-color: #ffffff;
-  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 .cuckoo {
@@ -13,20 +12,46 @@ body {
   border-left: solid rgb(204, 214, 221) 1px;
 }
 
-.cuckoo .row {
-  margin: 0 0 0.5em
+.cuckoo * {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
-.cuckoo .row .button {
+.cuckoo .row {
+  margin: 0 0 0.5em;
+  display: flex;
+}
+
+.cuckoo .col {
+  display: block;
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+.cuckoo .button {
+  display: block;
+  padding: 0.2em;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2em;
   border: solid rgb(29, 161, 242) 1px;
   color: rgb(29, 161, 242);
   font-size: 100%;
   font-weight: bold;
-  display: block;
   text-decoration: none;
   text-align: center;
-  padding: 0.2em;
+  background-color: #ffffff;
+  outline-style: none;
+}
+
+.cuckoo .button:hover {
+  background-color: rgb(226, 245, 252);
+}
+
+.cuckoo .card {
+  border: solid 1px #cccccc;
+  padding: 0.5em;
+  border-radius: 0.5em;
   width: 100%;
-  background-color: white;
-  border-radius: 100px;
+  min-height: 2em;
 }
