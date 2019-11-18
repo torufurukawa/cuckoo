@@ -4,6 +4,8 @@
   "description": "Twitter-like UI style and functions",
   "main": "dist/index.js",
   "scripts": {
+    "build": "babel src --out-dir dist",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -13,5 +15,19 @@
   "author": "Toru Furukawa",
   "license": "MIT",
   "homepage": "https://github.com/torufurukawa/cuckoo",
-  "devDependencies": {}
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {},
+  "babel": {
+    "presets": [
+      ["env", { "targets": {"node": 7}, "useBuiltIns": true}]
+    ]
+  },
+  "ava": {
+    "files": ["test/**/*.js"],
+    "sources": ["src/**/*.js"]
+  }
 }
