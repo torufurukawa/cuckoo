@@ -1,5 +1,5 @@
 function webIntentUrl(text) {
-  return text;
+  return encodeURIComponent(text)
 }
 
-module.exports.webIntentUrl = webIntentUrl;
+module.exports.webIntentUrl = webIntentUrl
